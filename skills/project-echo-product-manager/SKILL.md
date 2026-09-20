@@ -15,8 +15,8 @@ Use Project Echo MCP tools (thin wrappers over `https://api.projectecho.io/v1`) 
 ## Prerequisites
 
 1. API key from **API & MCP** in the staff app — recommend the **Contributor** preset (or Full agent for broader write access).
-2. MCP client env: `PE_API_BASE_URL`, `PE_API_KEY_ID`, `PE_API_TOKEN` (see [Connect MCP](https://docs.projectecho.io/api-mcp-and-embed/connect-mcp)).
-3. If tools fail with 403, the key is missing a permission — tell the user which permission and do not invent workarounds.
+2. MCP via `npx -y @project-echo/mcp` with env `PE_API_BASE_URL`, `PE_API_KEY_ID`, `PE_API_TOKEN` (see [Connect MCP](https://docs.projectecho.io/api-mcp-and-embed/connect-mcp)). Requires Node.js 18+.
+3. If the MCP server fails to load with E404 or connection closed, treat it as install/env (not OAuth). If tools fail with 403, the key is missing a permission — tell the user which permission and do not invent workarounds.
 
 ## Ground rules
 
